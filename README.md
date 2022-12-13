@@ -1,5 +1,6 @@
 ### Hi there 👋
 |--|--|
+|--|--|
 | https://github-readme-stats.vercel.app/api?username=TimurTurdyev&show_icons=true&theme=radical&include_all_commits=true | https://github-readme-stats.vercel.app/api/top-langs/?username=TimurTurdyev&theme=radical&layout=compact |
 
 <!--
