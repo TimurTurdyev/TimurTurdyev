@@ -1,10 +1,6 @@
 <h1 align="center">Hi 👋, I'm Timur</h1>
 <h3 align="center">A passionate backend developer from Moscow</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=timurturdyev&label=Profile%20views&color=0e75b6&style=flat" alt="timurturdyev" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=timurturdyev" alt="timurturdyev" /></a> </p>
-
 - 🔭 I’m currently working on [waviot](https://waviot.ru)
 
 - 📫 How to reach me **borodatimur@gmail.com**
