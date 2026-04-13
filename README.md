@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3500&pause=900&color=58A6FF&center=true&vCenter=true&width=780&lines=Правильный+инструмент+важнее+модного;Понимаю+и+legacy+(PHTML%2C+jQuery)%2C+и+современный+стек;Поднимал+PHP+с+5.6+до+актуальных+версий;Переводил+Zend+Framework+на+Laminas;Новые+технологии+—+в+пет-проектах%2C+на+проде+—+стабильный+стек;Не+переписываю+то%2C+что+работает+без+причины" alt="Typing SVG" />
+  <img src="./assets/typing.svg" alt="Принципы работы" />
 </p>
 
 <p align="center">
@@ -108,19 +108,6 @@
 | ⚙️ [Simple-Settings](https://github.com/TimurTurdyev/Simple-Settings) | Минималистичный пакет настроек для Laravel | PHP |
 
 > Основная работа над коммерческими продуктами — во внутреннем GitLab Waviot.
-
----
-
-### 📊 Активность на GitHub
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=TimurTurdyev&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TimurTurdyev&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=TimurTurdyev&theme=tokyonight&hide_border=true" />
-</p>
 
 ---
 
