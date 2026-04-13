@@ -1,8 +1,8 @@
 <h1 align="center">Тимур Турдыев</h1>
 
 <p align="center">
-  Делаю веб уже много лет — от legacy PHP 5.6 до современного TypeScript и Go-микросервисов.<br/>
-  Стараюсь выбирать инструмент под задачу, а не наоборот.
+  В разработке с 2014 года — от legacy PHP 5.6 до современного TypeScript и Go-микросервисов.<br/>
+  Ко всему пришёл сам. Стараюсь выбирать инструмент под задачу, а не наоборот.
 </p>
 
 <p align="center">
@@ -13,12 +13,15 @@
   <img src="https://img.shields.io/badge/Moscow-🇷🇺-lightgrey?style=flat-square" />
   <img src="https://img.shields.io/badge/Company-@waviot-2d9cdb?style=flat-square" />
   <img src="https://img.shields.io/badge/IoT-NB--Fi-success?style=flat-square" />
-  <img src="https://img.shields.io/badge/GitHub-since%202018-181717?style=flat-square&logo=github" />
+  <img src="https://img.shields.io/badge/Coding%20since-2014-FF6B6B?style=flat-square" />
+  <img src="https://img.shields.io/badge/Self--taught-✓-8b5cf6?style=flat-square" />
 </p>
 
 ---
 
 ### 👋 Немного обо мне
+
+Пишу код **с 2014 года**. Профильного образования не получал — всему научился сам: по документации, форумам, чужому коду и собственным ошибкам. Этот путь дольше, чем курсы или университет, но он приучил не запоминать «как правильно», а каждый раз разбираться, **почему** так.
 
 До работы в продуктовой команде много лет занимался фрилансом. Начинал как разработчик на **русскоязычном форуме OpenCart** — брал задачи по модулям, магазинам, интеграциям. Со временем заказы почти перестали приходить из открытых площадок: клиенты начали **рекомендовать меня друг другу**, и большая часть проектов пошла по сарафанному радио.
 
