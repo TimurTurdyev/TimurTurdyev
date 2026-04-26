@@ -58,11 +58,13 @@
 | Основные сервисы биллинга/лицензий | **Laravel (PHP)** | Экосистема, скорость разработки, проверено временем |
 | Сервис лицензирования (legacy) | **Yii2 + Codeception + RBAC** | Работает стабильно, переписывать без причины — дорого |
 | Высоконагруженная авторизация | **Go** | Там, где PHP избыточен: низкая латентность, бинарник |
+| Очереди и шина между сервисами | **RabbitMQ + AMQP** | Развязка сервисов: отказ одного не роняет остальных, нагрузка сглаживается очередью |
 | Телефония / callbacks | **Python** | Хорошие библиотеки под конкретные задачи |
 | Сервер производства (legacy) → новый | **Python → сейчас переписываю** | Старый сервер работает, новый пишу параллельно без простоя |
 | Поиск по большим каталогам | **SphinxSearch** | Когда нужна полнотекстовая выборка с предсказуемой скоростью |
 | Миграции версий PHP и фреймворков | **PHP 5.6 → 8.x, Zend → Laminas, Yii upgrade** | Переводил несколько проектов на актуальные версии без downtime |
 | Desktop-утилиты для инженеров | **Go + Wails** | Нужен кроссплатформенный бинарник без Electron-веса |
+| Программатор устройств | **Qt + C++ + OpenSSL** | Кроссплатформенный десктоп под специфичную железную обвязку, где Wails не подходит |
 | Legacy отчёты и старые модули | **PHP (self-made MVC, PHTML)** | Не трогаем то, что работает — если трогаем, то точечно |
 | Поиск и аналитика нового поколения | **Meilisearch + Docker** | Правильный инструмент под новую задачу поиска |
 
@@ -74,11 +76,13 @@
 
 **Языки** — PHP (8+), JavaScript / TypeScript, Go, Python, Java, Bash
 
-**Backend-фреймворки** — Laravel · Yii2 · **Laminas (бывший Zend Framework)** · OpenCart · самописный MVC (legacy) · Go (чистый) · Python (серверные приложения)
+**Backend-фреймворки** — Laravel · Yii2 · **Laminas (бывший Zend Framework)** · OpenCart · самописный MVC (legacy) · Go (чистый) · Python (серверные приложения · FastAPI · aiohttp)
 
 **Frontend** — TypeScript · Vue · Alpine.js · Blade · **jQuery** (да, знаю, когда он уместен) · Tailwind · Bootstrap · Vite · Electron · Wails
 
 **БД и поиск** — MySQL · PostgreSQL · MongoDB · Redis · **SphinxSearch** · Meilisearch
+
+**Очереди и шина** — RabbitMQ · AMQP
 
 **Инфраструктура** — Docker · Linux (debian-пакеты, systemd-юниты) · Nginx · Git · cron/yoyo/fabric для старых деплоев
 
@@ -95,6 +99,7 @@
   <img src="https://img.shields.io/badge/Laminas-0086C8?style=for-the-badge&logo=laminas&logoColor=white" />
   <img src="https://img.shields.io/badge/SphinxSearch-010101?style=for-the-badge&logo=apache&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
   <img src="https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=black" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
@@ -102,6 +107,7 @@
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
   <img src="https://img.shields.io/badge/Meilisearch-FF5CAA?style=for-the-badge&logo=meilisearch&logoColor=white" />
+  <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 </p>
