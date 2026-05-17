@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/badge/IoT-NB--Fi-success?style=flat-square" />
   <img src="https://img.shields.io/badge/Coding%20since-2014-FF6B6B?style=flat-square" />
   <img src="https://img.shields.io/badge/Self--taught-✓-8b5cf6?style=flat-square" />
+  <img src="https://img.shields.io/badge/Building-@mercurioplatform-22c55e?style=flat-square" />
 </p>
 
 ---
@@ -23,7 +24,9 @@
 
 Пишу код **с 2014 года**. Профильного образования не получал — всему научился сам: по документации, форумам, чужому коду и собственным ошибкам. Этот путь дольше, чем курсы или университет, но он приучил не запоминать «как правильно», а каждый раз разбираться, **почему** так.
 
-До работы в продуктовой команде много лет занимался фрилансом. Начинал как разработчик на **русскоязычном форуме OpenCart** — брал задачи по модулям, магазинам, интеграциям. Со временем заказы почти перестали приходить из открытых площадок: клиенты начали **рекомендовать меня друг другу**, и большая часть проектов пошла по сарафанному радио.
+**В разработку пришёл не с нуля.** Сначала был свой **интернет-магазин** — я вёл его как владелец, и узнал e-commerce со стороны денег: воронка, выгрузки, возвраты, маркетплейсы, «небольшой баг в корзине = потерянный заказ». Потом был период **SEO**: техническая оптимизация, скорость, индексация, разметка, аналитика. К моменту, когда я начал писать код, я уже хорошо понимал, **что** нужно бизнесу и **где** именно он теряет деньги — оставалось научиться это чинить руками.
+
+Поэтому первой платформой стал **OpenCart**: я знал её изнутри как владелец магазина и как оптимизатор, и было естественно начать писать под неё модули. Долго брал заказы на **русскоязычном форуме OpenCart** — по магазинам, интеграциям, миграциям. Со временем заказы почти перестали приходить из открытых площадок: клиенты начали **рекомендовать меня друг другу**, и большая часть проектов пошла по сарафанному радио.
 
 Этот опыт научил двум главным вещам, которые я ценю до сих пор:
 
@@ -114,6 +117,37 @@
 
 ---
 
+### 🚀 Что строю сейчас — Mercurio Platform
+
+Параллельно с основной работой делаю **[Mercurio](https://github.com/mercurioplatform)** — собственную admin-платформу для интернет-магазинов на **Laravel + Blade + Bootstrap 5 + jQuery**. Стек выбран намеренно: серверный рендер с точечным AJAX — та же идея, что у **Hotwire, HTMX и Laravel Livewire**, только без новой обучающей кривой поверх и так знакомых инструментов. Новый раздел админки добавляется одним классом, без отдельного SPA-приложения сбоку и build-цепочки на пустом месте.
+
+Это сборка всех трёх «прошлых жизней» в одном продукте — владельца магазина, SEO-специалиста и full-stack-разработчика: сделать админку, в которой удобно тем, кто **реально продаёт**, а не «настраивает CRM».
+
+**Состав админки**
+
+| Раздел | Что внутри |
+| --- | --- |
+| 📦 **Каталог** | Товары · Категории · Бренды · Атрибуты · Группы · Варианты · Опции · Изображения |
+| 🛒 **Продажи** | Заказы · Возвраты (RMA) |
+| 👥 **Клиенты / CRM** | Клиенты · Задачи · Диалоги · Быстрые ответы · Сегментация |
+| 📣 **Маркетинг** | Промокоды · Брошенные корзины · Отзывы |
+| 📝 **Контент** | Блог · Страницы · Медиа |
+| 🏬 **Склад** | Остатки · Движения · Перемещения · Приходы (многоскладовость) |
+| 📊 **Аналитика** | Когорты · LTV |
+| ⚙️ **Сервис** | Импорт CSV (с прогрессом и кэшем картинок) · Audit log |
+| 🔧 **Настройки** | Контакты · Доставка · Оплата · Почта · API + Webhooks |
+| 🛡️ **Команда** | Пользователи · Роли и права |
+
+**Open-source — то, что выделил из Mercurio в отдельные пакеты**
+
+| Пакет | О чём | Стек |
+| --- | --- | --- |
+| 📋 [mercurioplatform/tables](https://github.com/mercurioplatform/tables) | Reusable list/table engine для Laravel-админок: декларативный `Resource`-класс → admin-страница с поиском, сортировкой, фильтрами, saved views, bulk/row actions, экспортом, prefs и audit log — одной строкой роута | PHP · Laravel · Bootstrap 5 · jQuery · Blade |
+
+> Пакет вырос из реального проекта, а не из «давайте сделаем фреймворк». 5 сознательных точек расширения; страница рендерится сервером, AJAX подгружает только `<x-tables::table-root>`.
+
+---
+
 ### 📌 Публичные проекты
 
 Коммерческий код закрыт под NDA — здесь то, что можно показать: модули, SDK, утилиты и эксперименты.
@@ -123,11 +157,16 @@
 | 📞 [Laravel-Mango-Office](https://github.com/TimurTurdyev/Laravel-Mango-Office) | Интеграция Laravel с облачной АТС Mango Office | PHP · Laravel |
 | 📦 [Export-Import-Opencart-Vue](https://github.com/TimurTurdyev/Export-Import-Opencart-Vue) | Импорт/экспорт товаров OpenCart с Vue-интерфейсом | PHP · Vue |
 | 📍 [opencart-dadata](https://github.com/TimurTurdyev/opencart-dadata) | Подсказки адресов/ФИО от Dadata в OpenCart | Vue · PHP |
+| 🧹 [opencart-image-remover](https://github.com/TimurTurdyev/opencart-image-remover) | Чистка каталога изображений OpenCart от «осиротевших» файлов | PHP |
+| 🚚 [migration-opencart-database-to-new-version](https://github.com/TimurTurdyev/migration-opencart-database-to-new-version) | Миграции БД между версиями OpenCart | PHP |
 | 📡 [NB-Fi-platform](https://github.com/TimurTurdyev/NB-Fi-platform) | LPWAN IoT-платформа на протоколе NB-Fi | PHP |
+| 🛰️ [my-tools-parse-message-waviot](https://github.com/TimurTurdyev/my-tools-parse-message-waviot) | Десктопный парсер сообщений WAVIOT API — личная утилита для инженеров | Wails · Vue 3 · Tailwind 4 |
 | 📊 [Dashboard-Megaplan-and-Mangooffice](https://github.com/TimurTurdyev/Dashboard-Megaplan-and-Mangooffice) | Отчёты по менеджерам из Megaplan + Mango Office | PHP |
 | 🔗 [sdk2.0](https://github.com/TimurTurdyev/sdk2.0) | PHP SDK для API v2.0 сервиса СДЭК | PHP |
-| 🚚 [migration-opencart-database-to-new-version](https://github.com/TimurTurdyev/migration-opencart-database-to-new-version) | Миграции БД между версиями OpenCart | PHP |
 | ⚙️ [Simple-Settings](https://github.com/TimurTurdyev/Simple-Settings) | Минималистичный пакет настроек для Laravel | PHP |
+| 📈 [simple-settings-benchmark](https://github.com/TimurTurdyev/simple-settings-benchmark) | Бенчмарк производительности пакета Simple-Settings | PHP · Laravel · Blade |
+| 🖼️ [transfer-images](https://github.com/TimurTurdyev/transfer-images) | Перенос папки с изображениями между серверами | Shell |
+| 🛜 [vpn-help](https://github.com/TimurTurdyev/vpn-help) | Восстановление интернета на macOS при конфликте OpenVPN и AmneziaVPN | Shell · macOS |
 
 > Основная работа над коммерческими продуктами — во внутреннем GitLab Waviot.
 
