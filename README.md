@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/typing.svg" alt="Принципы работы" />
+  <img src="./assets/typing.svg" alt="Таймлайн стека: 2014 → сейчас" />
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@
 - **Код должен работать у клиента без меня.** Когда клиент — не программист, ты не можешь оставить за собой «тут надо знать, как это собирать». Всё должно просто запускаться, обновляться и чиниться в понятных местах.
 - **Рекомендации — лучший KPI.** Когда человек приводит к тебе своего знакомого, это значит, что предыдущий проект не доставил ему боли. Это дисциплинирует сильнее любого код-ревью.
 
-Сейчас основное время — в продуктовой разработке Waviot, а фриланс остаётся как «интересные проекты для интересных людей».
+Сейчас работаю в продуктовой разработке Waviot.
 
 ---
 
@@ -83,11 +83,11 @@
 
 **Frontend** — TypeScript · Vue · Alpine.js · Blade · **jQuery** (да, знаю, когда он уместен) · Tailwind · Bootstrap · Vite · Electron · Wails
 
-**БД и поиск** — MySQL · PostgreSQL · MongoDB · Redis · **SphinxSearch** · Meilisearch
+**БД и поиск** — MySQL · MariaDB · PostgreSQL · SQLite · MongoDB · Redis · **SphinxSearch** · **Manticore** · Meilisearch
 
 **Очереди и шина** — RabbitMQ · AMQP
 
-**Инфраструктура** — Docker · Linux (debian-пакеты, systemd-юниты) · Nginx · Git · cron/yoyo/fabric для старых деплоев
+**Инфраструктура** — Docker · **Ansible** (роли, инвентари prod/stage, Vault, идемпотентный прогон + отдельный плейбук приёмки) · Deployer · **Ubuntu/Debian-серверы** (systemd-юниты, deb-пакеты, сторонние репозитории, sysctl, бэкапы) · **Bash** (скрипты эксплуатации и деплоя) · Nginx · Git · cron/yoyo/fabric для старых деплоев
 
 **Интеграции** — Mango Office · Megaplan · Dadata · СДЭК · ВКонтакте API · OpenCart marketplace API
 
@@ -106,20 +106,25 @@
   <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
   <img src="https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=black" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
   <img src="https://img.shields.io/badge/Meilisearch-FF5CAA?style=for-the-badge&logo=meilisearch&logoColor=white" />
   <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
+  <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" />
 </p>
 
 ---
 
 ### 🚀 Что строю сейчас — Mercurio Platform
 
-Параллельно с основной работой делаю **[Mercurio](https://github.com/mercurioplatform)** — собственную admin-платформу для интернет-магазинов на **Laravel + Blade + Bootstrap 5 + jQuery**. Стек выбран намеренно: серверный рендер с точечным AJAX — та же идея, что у **Hotwire, HTMX и Laravel Livewire**, только без новой обучающей кривой поверх и так знакомых инструментов. Новый раздел админки добавляется одним классом, без отдельного SPA-приложения сбоку и build-цепочки на пустом месте.
+**[Mercurio](https://github.com/mercurioplatform)** — мой проект: admin-платформа для интернет-магазинов на **Laravel + Blade + Bootstrap 5 + jQuery**. Стек выбран намеренно: серверный рендер с точечным AJAX — та же идея, что у **Hotwire, HTMX и Laravel Livewire**, только без новой обучающей кривой поверх и так знакомых инструментов. Новый раздел админки добавляется одним классом, без отдельного SPA-приложения сбоку и build-цепочки на пустом месте.
 
 Это сборка всех трёх «прошлых жизней» в одном продукте — владельца магазина, SEO-специалиста и full-stack-разработчика: сделать админку, в которой удобно тем, кто **реально продаёт**, а не «настраивает CRM».
 
@@ -138,13 +143,24 @@
 | 🔧 **Настройки** | Контакты · Доставка · Оплата · Почта · API + Webhooks |
 | 🛡️ **Команда** | Пользователи · Роли и права |
 
-**Open-source — то, что выделил из Mercurio в отдельные пакеты**
+Куски платформы, которые оказались полезны сами по себе, я выношу в отдельные пакеты и выкладываю в open-source — они собраны [в секции ниже](#-open-source-пакеты).
+
+---
+
+### 📦 Open-source пакеты
+
+Выношу наружу только то, что уже отработало в боевом проекте и понадобилось во втором, — поэтому здесь нет «фреймворков ради фреймворков». Всё ниже написано мной: и то, что под ником, и то, что под организацией [`mercurioplatform`](https://github.com/mercurioplatform) — она тоже моя.
 
 | Пакет | О чём | Стек |
 | --- | --- | --- |
-| 📋 [mercurioplatform/tables](https://github.com/mercurioplatform/tables) | Reusable list/table engine для Laravel-админок: декларативный `Resource`-класс → admin-страница с поиском, сортировкой, фильтрами, saved views, bulk/row actions, экспортом, prefs и audit log — одной строкой роута | PHP · Laravel · Bootstrap 5 · jQuery · Blade |
+| 📋 [mercurioplatform/tables](https://github.com/mercurioplatform/tables) <br/><sub>[![Packagist](https://img.shields.io/packagist/v/mercurioplatform/tables?style=flat-square&label=)](https://packagist.org/packages/mercurioplatform/tables)</sub> | List/table-движок для Laravel-админок: декларативный `Resource`-класс → страница с поиском, сортировкой, фильтрами, saved views, bulk/row actions, экспортом, prefs и audit log — одной строкой роута | PHP · Laravel · Bootstrap 5 · jQuery · Blade |
+| ⚙️ [timurturdyev/simple-settings](https://github.com/TimurTurdyev/Simple-Settings) <br/><sub>[![Packagist](https://img.shields.io/packagist/v/timurturdyev/simple-settings?style=flat-square&label=)](https://packagist.org/packages/timurturdyev/simple-settings)</sub> | Key-value настройки для Laravel: группы, кэш, автоприведение типов, атомарная пакетная запись | PHP 8.2+ · Laravel 12/13 |
+| 🐍 [simple-db-settings](https://github.com/TimurTurdyev/simple-settings-py) <br/><sub>[![PyPI](https://img.shields.io/pypi/v/simple-db-settings?style=flat-square&label=)](https://pypi.org/project/simple-db-settings/)</sub> | Тот же менеджер настроек для Python на SQLAlchemy 2 — **совместим по таблице с PHP-версией**: сервисы на Laravel и на Python читают и пишут одни и те же настройки | Python · SQLAlchemy 2 · pydantic |
+| 🛒 [timurturdyev/simple-cart](https://github.com/TimurTurdyev/simple-cart) <br/><sub>[![Packagist](https://img.shields.io/packagist/v/timurturdyev/simple-cart?style=flat-square&label=)](https://packagist.org/packages/timurturdyev/simple-cart)</sub> | Корзина, закладки и сравнение — один примитив с политикой из конфига. Деньги считает только корзина, через конвейер классов-корректировок: без float и без обязательных миграций | PHP 8.3+ · Laravel 12/13 |
+| 🔎 [timurturdyev/simple-seo](https://github.com/TimurTurdyev/simple-seo) <br/><sub>[![Packagist](https://img.shields.io/packagist/v/timurturdyev/simple-seo?style=flat-square&label=)](https://packagist.org/packages/timurturdyev/simple-seo)</sub> | Meta, Open Graph, карточки Twitter/X и JSON-LD. Ядро без зависимостей, слой Laravel — в том же пакете. Замена `artesaos/seotools`: дефолты не «липнут» к странице, JSON-LD собирается коллекцией в `@graph` | PHP 8.2+ · Laravel 11/12 |
 
-> Пакет вырос из реального проекта, а не из «давайте сделаем фреймворк». 5 сознательных точек расширения; страница рендерится сервером, AJAX подгружает только `<x-tables::table-root>`.
+> `tables`: 5 сознательных точек расширения, страница рендерится сервером, AJAX подгружает только `<x-tables::table-root>`.<br/>
+> `simple-seo` и `simple-cart` написаны **с нуля** на замену `artesaos/seotools` и `darryldecode/laravelshoppingcart` в своих проектах: от старых пакетов взята только идея, реализация и API свои — общего кода нет. Оба выросли из e-commerce-практики, а не из желания сделать ещё один пакет.
 
 ---
 
@@ -162,9 +178,8 @@
 | 📡 [NB-Fi-platform](https://github.com/TimurTurdyev/NB-Fi-platform) | LPWAN IoT-платформа на протоколе NB-Fi | PHP |
 | 🛰️ [my-tools-parse-message-waviot](https://github.com/TimurTurdyev/my-tools-parse-message-waviot) | Десктопный парсер сообщений WAVIOT API — личная утилита для инженеров | Wails · Vue 3 · Tailwind 4 |
 | 📊 [Dashboard-Megaplan-and-Mangooffice](https://github.com/TimurTurdyev/Dashboard-Megaplan-and-Mangooffice) | Отчёты по менеджерам из Megaplan + Mango Office | PHP |
-| 🔗 [sdk2.0](https://github.com/TimurTurdyev/sdk2.0) | PHP SDK для API v2.0 сервиса СДЭК | PHP |
-| ⚙️ [Simple-Settings](https://github.com/TimurTurdyev/Simple-Settings) | Минималистичный пакет настроек для Laravel | PHP |
-| 📈 [simple-settings-benchmark](https://github.com/TimurTurdyev/simple-settings-benchmark) | Бенчмарк производительности пакета Simple-Settings | PHP · Laravel · Blade |
+| 🔗 [sdk2.0](https://github.com/TimurTurdyev/sdk2.0) <sub>(форк)</sub> | PHP SDK для API v2.0 сервиса СДЭК — форк официального `cdek-it/sdk2.0`, держу под свои интеграции | PHP |
+| 📈 [simple-settings-benchmark](https://github.com/TimurTurdyev/simple-settings-benchmark) | Голый Laravel-стенд: замеры производительности пакета Simple-Settings | PHP · Laravel · Blade |
 | 🖼️ [transfer-images](https://github.com/TimurTurdyev/transfer-images) | Перенос папки с изображениями между серверами | Shell |
 | 🛜 [vpn-help](https://github.com/TimurTurdyev/vpn-help) | Восстановление интернета на macOS при конфликте OpenVPN и AmneziaVPN | Shell · macOS |
 
@@ -187,5 +202,5 @@
 </p>
 
 <p align="center">
-  <sub>💡 Открыт к <b>интересным проектам и подработкам</b> — особенно где нужно связать системы, разобраться в чужом коде или принять инженерное решение, а не просто «накодить фичу».</sub>
+  <sub>💡 Открыт к <b>интересным инженерным задачам</b> — особенно где нужно связать системы, разобраться в чужом коде или принять инженерное решение, а не просто «накодить фичу».</sub>
 </p>

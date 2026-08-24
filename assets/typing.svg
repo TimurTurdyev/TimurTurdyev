@@ -1,70 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 60" width="820" height="60" role="img" aria-label="Принципы работы">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 170" width="820" height="170" role="img" aria-label="Таймлайн стека: с 2014 до сегодня">
+  <defs>
+    <filter id="soft" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="track" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#58A6FF"/>
+      <stop offset="0.45" stop-color="#A371F7"/>
+      <stop offset="1"    stop-color="#39C5CF"/>
+    </linearGradient>
+  </defs>
+
   <style>
-    .line {
-      font: 600 19px ui-monospace, 'SFMono-Regular', 'Fira Code', Menlo, Consolas, monospace;
-      fill: #58A6FF;
-      text-anchor: middle;
-      dominant-baseline: middle;
-    }
-    .cursor {
-      font: 600 22px ui-monospace, 'SFMono-Regular', 'Fira Code', Menlo, Consolas, monospace;
-      fill: #58A6FF;
-    }
+    .yr  { font: 700 30px ui-monospace, 'SFMono-Regular', 'Fira Code', Menlo, Consolas, monospace; text-anchor: middle; letter-spacing: 2px; }
+    .tk  { font: 600 17px ui-monospace, 'SFMono-Regular', 'Fira Code', Menlo, Consolas, monospace; text-anchor: middle; }
+    .ax  { font: 600 12px ui-monospace, 'SFMono-Regular', 'Fira Code', Menlo, Consolas, monospace; text-anchor: middle; }
+    .sep { fill: #8b949e; }
   </style>
 
-  <g transform="translate(410, 30)">
-    <text class="line" opacity="0">
-      Правильный инструмент важнее модного
-      <animate attributeName="opacity"
-        values="0;1;1;0;0"
-        keyTimes="0;0.012;0.188;0.2;1"
-        dur="30s"
-        repeatCount="indefinite"/>
-    </text>
-
-    <text class="line" opacity="0">
-      Понимаю и legacy, и современный стек
-      <animate attributeName="opacity"
-        values="0;0;1;1;0;0"
-        keyTimes="0;0.2;0.212;0.388;0.4;1"
-        dur="30s"
-        repeatCount="indefinite"/>
-    </text>
-
-    <text class="line" opacity="0">
-      Поднимал PHP с 5.6 до актуальных версий
-      <animate attributeName="opacity"
-        values="0;0;1;1;0;0"
-        keyTimes="0;0.4;0.412;0.588;0.6;1"
-        dur="30s"
-        repeatCount="indefinite"/>
-    </text>
-
-    <text class="line" opacity="0">
-      Переводил Zend Framework на Laminas
-      <animate attributeName="opacity"
-        values="0;0;1;1;0;0"
-        keyTimes="0;0.6;0.612;0.788;0.8;1"
-        dur="30s"
-        repeatCount="indefinite"/>
-    </text>
-
-    <text class="line" opacity="0">
-      Эксперименты — в пет-проектах, прод — стабильный стек
-      <animate attributeName="opacity"
-        values="0;0;1;1;0"
-        keyTimes="0;0.8;0.812;0.988;1"
-        dur="30s"
-        repeatCount="indefinite"/>
-    </text>
+  <!-- ── кадры: год + технологии этого отрезка ─────────────────────── -->
+  <g transform="translate(410,0)">
+    <g opacity="1">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.1567;0.1667;1" dur="36s" repeatCount="indefinite"/>
+      <text class="yr" y="46" fill="#58A6FF">2014</text>
+      <text class="tk" y="80"><tspan fill="#58A6FF">OpenCart</tspan><tspan class="sep"> · </tspan><tspan fill="#A371F7">PHP 5.6</tspan><tspan class="sep"> · </tspan><tspan fill="#3FB950">jQuery</tspan><tspan class="sep"> · </tspan><tspan fill="#39C5CF">MySQL</tspan></text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1667;0.1767;0.3233;0.3333;1" dur="36s" repeatCount="indefinite"/>
+      <text class="yr" y="46" fill="#58A6FF">2016</text>
+      <text class="tk" y="80"><tspan fill="#F0883E">SphinxSearch</tspan><tspan class="sep"> · </tspan><tspan fill="#58A6FF">СДЭК</tspan><tspan class="sep"> · </tspan><tspan fill="#A371F7">Dadata</tspan><tspan class="sep"> · </tspan><tspan fill="#3FB950">Mango Office</tspan></text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3333;0.3433;0.4900;0.5;1" dur="36s" repeatCount="indefinite"/>
+      <text class="yr" y="46" fill="#58A6FF">2018</text>
+      <text class="tk" y="80"><tspan fill="#F0883E">Laravel</tspan><tspan class="sep"> · </tspan><tspan fill="#3FB950">Vue</tspan><tspan class="sep"> · </tspan><tspan fill="#58A6FF">Blade</tspan><tspan class="sep"> · </tspan><tspan fill="#A371F7">PostgreSQL</tspan></text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.51;0.6567;0.6667;1" dur="36s" repeatCount="indefinite"/>
+      <text class="yr" y="46" fill="#58A6FF">2020</text>
+      <text class="tk" y="80"><tspan fill="#F0883E">Laravel</tspan><tspan class="sep"> · </tspan><tspan fill="#58A6FF">Yii2</tspan><tspan class="sep"> · </tspan><tspan fill="#39C5CF">Laminas</tspan><tspan class="sep"> · </tspan><tspan fill="#A371F7">Python</tspan><tspan class="sep"> · </tspan><tspan fill="#3FB950">MongoDB</tspan><tspan class="sep"> · </tspan><tspan fill="#F0883E">RabbitMQ</tspan></text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6667;0.6767;0.8233;0.8333;1" dur="36s" repeatCount="indefinite"/>
+      <text class="yr" y="46" fill="#58A6FF">2022</text>
+      <text class="tk" y="80"><tspan fill="#39C5CF">Go</tspan><tspan class="sep"> · </tspan><tspan fill="#58A6FF">Docker</tspan><tspan class="sep"> · </tspan><tspan fill="#A371F7">TypeScript</tspan><tspan class="sep"> · </tspan><tspan fill="#F0883E">Java</tspan><tspan class="sep"> · </tspan><tspan fill="#3FB950">Wails</tspan></text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.8333;0.8433;1" dur="36s" repeatCount="indefinite"/>
+      <text class="yr" y="46" fill="#58A6FF">2024</text>
+      <text class="tk" y="80"><tspan fill="#F0883E">Laravel 13</tspan><tspan class="sep"> · </tspan><tspan fill="#3FB950">Ansible</tspan><tspan class="sep"> · </tspan><tspan fill="#39C5CF">Manticore</tspan><tspan class="sep"> · </tspan><tspan fill="#58A6FF">FastAPI</tspan><tspan class="sep"> · </tspan><tspan fill="#A371F7">свои пакеты</tspan></text>
+    </g>
   </g>
 
-  <text class="cursor" x="790" y="38">
-    <animate attributeName="opacity"
-      values="1;1;0;0;1"
-      keyTimes="0;0.5;0.5;1;1"
-      dur="1s"
-      repeatCount="indefinite"/>
-    ▌
-  </text>
+  <!-- ── ось времени ───────────────────────────────────────────────── -->
+  <line x1="70" y1="130" x2="750" y2="130" stroke="#8b949e" stroke-opacity="0.3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="70" y1="130" x2="750" y2="130" stroke="url(#track)" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="680">
+    <animate attributeName="stroke-dashoffset" values="680;0" dur="36s" repeatCount="indefinite"/>
+  </line>
+
+  <g>
+    <circle cx="70" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.005;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="70" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.005;1" dur="36s" repeatCount="indefinite"/>2014</text>
+    <circle cx="183" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.1667;0.1717;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="183" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.1667;0.1717;1" dur="36s" repeatCount="indefinite"/>2016</text>
+    <circle cx="297" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.3333;0.3383;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="297" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.3333;0.3383;1" dur="36s" repeatCount="indefinite"/>2018</text>
+    <circle cx="410" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.5;0.505;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="410" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.5;0.505;1" dur="36s" repeatCount="indefinite"/>2020</text>
+    <circle cx="523" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.6667;0.6717;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="523" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.6667;0.6717;1" dur="36s" repeatCount="indefinite"/>2022</text>
+    <circle cx="637" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.8333;0.8383;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="637" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#58A6FF;#58A6FF" keyTimes="0;0.8333;0.8383;1" dur="36s" repeatCount="indefinite"/>2024</text>
+    <circle cx="750" cy="130" r="3.5" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#39C5CF;#39C5CF" keyTimes="0;0.985;0.99;1" dur="36s" repeatCount="indefinite"/></circle>
+    <text class="ax" x="750" y="154" fill="#8b949e"><animate attributeName="fill" values="#8b949e;#8b949e;#39C5CF;#39C5CF" keyTimes="0;0.985;0.99;1" dur="36s" repeatCount="indefinite"/>сейчас</text>
+  </g>
+
+  <!-- ── бегун ─────────────────────────────────────────────────────── -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="70,130; 750,130" dur="36s" repeatCount="indefinite"/>
+
+    <g color="#58A6FF" filter="url(#soft)">
+      <animate attributeName="color" values="#58A6FF;#A371F7;#39C5CF" keyTimes="0;0.45;1" dur="36s" repeatCount="indefinite"/>
+
+      <!-- след скорости -->
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.45">
+        <line x1="-11" y1="-20" x2="-21" y2="-20"><animate attributeName="opacity" values="0.7;0.1;0.7" dur="0.6s" repeatCount="indefinite"/></line>
+        <line x1="-13" y1="-13" x2="-26" y2="-13"><animate attributeName="opacity" values="0.1;0.7;0.1" dur="0.6s" repeatCount="indefinite"/></line>
+      </g>
+
+      <!-- корпус: покачивание на бегу -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2.2; 0,0" dur="0.3s" repeatCount="indefinite"/>
+
+        <!-- дальняя нога -->
+        <line x1="0" y1="-13" x2="0" y2="0" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.55">
+          <animateTransform attributeName="transform" type="rotate" values="36 0 -13; -34 0 -13; 36 0 -13" dur="0.6s" repeatCount="indefinite"/>
+        </line>
+        <!-- дальняя рука -->
+        <line x1="3" y1="-22" x2="3" y2="-13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.55">
+          <animateTransform attributeName="transform" type="rotate" values="-52 3 -22; 48 3 -22; -52 3 -22" dur="0.6s" repeatCount="indefinite"/>
+        </line>
+
+        <!-- торс -->
+        <line x1="0" y1="-13" x2="3" y2="-22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- ближняя нога -->
+        <line x1="0" y1="-13" x2="0" y2="0" stroke="currentColor" stroke-width="2.8" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" values="-34 0 -13; 36 0 -13; -34 0 -13" dur="0.6s" repeatCount="indefinite"/>
+        </line>
+        <!-- ближняя рука -->
+        <line x1="3" y1="-22" x2="3" y2="-13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" values="48 3 -22; -52 3 -22; 48 3 -22" dur="0.6s" repeatCount="indefinite"/>
+        </line>
+
+        <!-- голова -->
+        <circle cx="4.6" cy="-27" r="4.4" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
 </svg>
