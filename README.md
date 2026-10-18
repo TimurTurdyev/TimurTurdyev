@@ -93,6 +93,7 @@
 | Проект | О чём | Стек |
 | --- | --- | --- |
 | [Mercurio](https://timcode.ru/cases/mercurio) | Своя платформа для интернет-магазинов: сырьё прайсов поставщиков хранится как есть, человек правит только решения, каталог собирается из них детерминированно. Приём прайсов профилями без кода под поставщика, поиск и фильтры на Manticore, обмен с 1С. У каждого клиента своя витрина, своя база и свой сервер, общее ядро - пакетом. | Laravel 13 · Inertia · React · TypeScript · PostgreSQL · Manticore |
+| [tim](https://github.com/TimurTurdyev/tim) | Утилита для терминала, которой пользуюсь каждый день: переход в проект с поиском, ssh мимо VPN, туннели через свой сервер, локальный запуск проектов. Одна команда проверяет все проекты разом: незакоммиченное, ответ сайта, сроки сертификатов и доменов, настройку почты. | Go · cobra · macOS |
 | [Экран продаж lpack](https://github.com/TimurTurdyev/dashboard-lpack) | Показатели отдела продаж оптового магазина упаковки на мониторе в офисе: виджеты из 1С, графики, вкладки сменяются по кругу. | Laravel 12 · jQuery · Chart.js |
 | [Laravel-Mango-Office](https://github.com/TimurTurdyev/Laravel-Mango-Office) | Небольшой пакет для API облачной АТС Mango Office: сотрудники, статистика звонков, записи разговоров. Вырос из экрана продаж для Prime Wood. | PHP · Laravel |
 | [Export-Import OpenCart + Vue](https://github.com/TimurTurdyev/Export-Import-Opencart-Vue) | Импорт и экспорт товаров OpenCart через Vue-интерфейс без перезагрузки страницы, форматы CSV и XLS. | PHP · Vue · OpenCart |
@@ -101,7 +102,7 @@
 | [Экран продаж Prime Wood](https://timcode.ru/cases/prime-wood-sales-screen) | Монитор отдела продаж: сделки из Megaplan и звонки из Mango Office, план месяца и доля закрытых сделок по менеджерам. PHP и cron, без фреймворка. | PHP · Megaplan API · Mango Office API |
 | [opencart-image-remover](https://github.com/TimurTurdyev/opencart-image-remover) | Чистка каталога изображений OpenCart от файлов, на которые больше не ссылается ни один товар. | PHP · OpenCart |
 | [vpn-help](https://github.com/TimurTurdyev/vpn-help) | Утилиты macOS против конфликта OpenVPN и AmneziaVPN: диагностика, зачистка повисших utun-интерфейсов, сброс DNS. | Bash · macOS |
-| [timcode.ru](https://timcode.ru) | Этот сайт: резюме в виде IDE, кейсы и статьи в markdown, справочник по паттернам на четырёх языках, curl-режим и машиночитаемые форматы. Собирается статикой. | VitePress · Vue · TypeScript |
+| [timcode.ru](https://timcode.ru) | Этот сайт: резюме, кейсы и статьи, справочник по паттернам на четырёх языках с тестами, curl-режим и машиночитаемые форматы. Собирается статикой. | VitePress · Vue · TypeScript |
 
 ## С чем работаю
 
